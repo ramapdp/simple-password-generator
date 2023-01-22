@@ -1,2 +1,3 @@
-# simple-password-generator
+## Password Generator
+
 Password generator using Javascript
