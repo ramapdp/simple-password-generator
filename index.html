@@ -26,12 +26,11 @@
         <div class="card-body">
           <h3 class="card-title text-center mb-4">Password Generator</h3>
           <div class="d-flex flex-column gap-3">
-            <input
-              class="form-control rounded-3 shadow-sm"
-              readonly
-              id="password"
-            />
-            <label for="range-input" class="form-label">Password Length</label>
+            <div class="input-group mb-3 gap-2">
+              <input class="form-control rounded-3 shadow-sm" readonly id="password">
+              <a class="btn btn-outline-primary shadow-sm rounded-3" onclick="savePassword()"><i class="bi bi-clipboard2"></i></a>
+            </div>
+            <label for="range-input" class="form-label">Password Length <small>(max 50)</small></label>
             <div
               class="d-flex flex-row align-items-center justify-content-between"
             >
@@ -46,20 +45,20 @@
                   oninput="updateValue(this.value)"
                 />
               </div>
-              <label
+              <input
                 for="range-input"
                 class="col-2 col-form-label border rounded-2 text-center shadow-sm"
                 id="password-length"
-                >0</label
+                type="number"
+                value="0"
+                oninput="updateValue(this.value)"
+                ></input
               >
             </div>
           </div>
           <div class="d-grid gap-2 mx-auto mt-3">
             <a class="btn btn-primary" onclick="getPassword()"
               >Generate Password</a
-            >
-            <a class="btn btn-outline-success" onclick="savePassword()"
-              ><i class="bi bi-clipboard2"></i> Copy</a
             >
           </div>
         </div>
